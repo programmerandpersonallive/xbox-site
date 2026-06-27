@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="250" viewBox="0 0 400 250">
+  <rect width="400" height="250" fill="#1a1a2e"/>
+  <rect x="50" y="90" width="300" height="4" fill="#107c10" rx="2"/>
+  <text x="200" y="140" text-anchor="middle" fill="#107c10" font-size="20" font-weight="bold">XBOX GAME 2</text>
+  <text x="200" y="170" text-anchor="middle" fill="#666" font-size="12">Game Card 2</text>
+</svg>
