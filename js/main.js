@@ -105,11 +105,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!el) return;
 
     const phrases = [
-      'Game Pass Ultimate',
+      'Game Pass',
       'Cloud Gaming',
+      'Cross-Play Multiplatform',
       'Quick Resume',
       'Smart Delivery',
-      'Cross-Play',
       'Auto HDR',
       'Ray Tracing',
       'FPS Boost',
