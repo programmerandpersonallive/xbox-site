@@ -2,6 +2,8 @@
 
 Учебный проект — лендинг в стиле официального сайта Xbox (xbox.com). Тёмная тема, плоский дизайн, авто-слайдер и интерактивная панель статусов.
 
+![Скриншот сайта](assets/images/Site.png)
+
 ## 🔗 Репозиторий
 
 [github.com/programmerandpersonallive/xbox-site](https://github.com/programmerandpersonallive/xbox-site)
@@ -27,7 +29,9 @@
 │       ├── GamePass.jpg
 │       ├── CloudeGaming.jpg
 │       ├── CrossplayMultiplatform.jpg
+│       ├── Icon.png
 │       ├── QuikeResume.jpg
+│       ├── Site.png
 │       ├── gamepad-black.jpg
 │       ├── gamepad-white.jpg
 │       ├── logo.svg
