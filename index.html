@@ -5,22 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Xbox Showcase — Игровая экосистема</title>
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-
-  <!-- Gaming Bold: Russo One (headings) + Chakra Petch (body) — рекомендовано UI Pro Max -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Russo+One&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <!-- ===== HEADER ===== -->
   <header class="header" role="banner">
-    <div class="header__inner container">
-      <a href="#" class="header__logo">
-        <span class="header__logo-accent">XBOX</span> SHOWCASE
-      </a>
+    <div class="header__inner">
+      <div class="header__left">
+        <a href="#" class="header__logo">
+          <span class="header__logo-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="#107c11" stroke-width="2" fill="none"/>
+              <path d="M8 8L16 16M16 8L8 16" stroke="#107c11" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="header__logo-text">XBOX <span class="header__logo-accent">SHOWCASE</span></span>
+        </a>
+        <span class="header__divider"></span>
+        <span class="header__tagline">Экосистема следующего поколения</span>
+      </div>
       <nav class="header__nav" aria-label="Главное меню">
         <ul class="header__nav-list">
           <li><a href="#hero" class="header__nav-link active">Главная</a></li>
@@ -33,76 +40,97 @@
 
   <main role="main">
 
-    <!-- ===== HERO + АВТО-СЛАЙДЕР ===== -->
-    <section id="hero" class="hero section">
-      <div class="hero__glow" aria-hidden="true"></div>
+    <!-- ===== HERO ===== -->
+    <section id="hero" class="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <img src="assets/images/GamePass.jpg" alt="" aria-hidden="true">
+        <div class="hero__overlay"></div>
+      </div>
+      <div class="hero__content">
+        <p class="hero__badge">XBOX SERIES S | X</p>
+        <h1 class="hero__title">ДОБРО ПОЖАЛОВАТЬ<br>В <span class="accent">XBOX</span> ЭКОСИСТЕМУ</h1>
+        <p class="hero__subtitle">Всё работает автоматически — ты просто играешь</p>
+        <div class="hero__actions">
+          <a href="#features" class="btn btn--primary">ФУНКЦИИ СИСТЕМЫ</a>
+          <a href="#gallery" class="btn btn--ghost">ГАЛЕРЕЯ →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== СЛАЙДЕР ===== -->
+    <section class="slider-section section">
       <div class="container">
-        <header class="hero__header">
-          <h1 class="hero__title">
-            Добро пожаловать в<br>
-            <span class="accent">Xbox Ecosystem</span>
-          </h1>
-          <p class="hero__subtitle">
-            Экосистема следующего поколения. <span class="accent">Всё работает автоматически.</span>
-          </p>
+        <header class="section__header">
+          <h2 class="section__title">ВОЗМОЖНОСТИ <span class="accent">ЭКОСИСТЕМЫ</span></h2>
+          <p class="section__desc">Ключевые функции Xbox, доступные на всех устройствах</p>
         </header>
 
-        <!-- Авто-слайдер (карусель) -->
-        <div class="carousel" role="region" aria-label="Автоматический слайдер функций Xbox">
+        <div class="carousel" role="region" aria-label="Автоматическая карусель функций Xbox">
           <div class="carousel__track" id="carouselTrack">
-            <!-- Слайд 1: Game Pass (новая картинка) -->
+            <!-- Слайд 1: Game Pass -->
             <article class="carousel__slide">
               <div class="carousel__slide-img">
                 <img src="assets/images/GamePass.jpg" alt="Game Pass" loading="eager">
+                <div class="carousel__slide-overlay"></div>
+                <div class="carousel__slide-badge">FEATURED</div>
               </div>
               <div class="carousel__slide-body">
-                <h3 class="carousel__slide-title">Game Pass</h3>
+                <h3 class="carousel__slide-title">GAME PASS</h3>
                 <p class="carousel__slide-desc">Сотни игр по подписке с первого дня релиза</p>
+                <span class="carousel__slide-link">ПОДРОБНЕЕ →</span>
               </div>
             </article>
-            <!-- Слайд 2: Cloud Gaming (новая картинка) -->
+            <!-- Слайд 2: Cloud Gaming -->
             <article class="carousel__slide">
               <div class="carousel__slide-img">
                 <img src="assets/images/CloudeGaming.jpg" alt="Cloud Gaming" loading="lazy">
+                <div class="carousel__slide-overlay"></div>
               </div>
               <div class="carousel__slide-body">
-                <h3 class="carousel__slide-title">Cloud Gaming</h3>
+                <h3 class="carousel__slide-title">CLOUD GAMING</h3>
                 <p class="carousel__slide-desc">Играй на телефоне, планшете и ПК без установки</p>
+                <span class="carousel__slide-link">ПОДРОБНЕЕ →</span>
               </div>
             </article>
-            <!-- Слайд 3: Cross-Play (новая картинка) -->
+            <!-- Слайд 3: Cross-Play -->
             <article class="carousel__slide">
               <div class="carousel__slide-img">
                 <img src="assets/images/CrossplayMultiplatform.jpg" alt="Cross-Play" loading="lazy">
+                <div class="carousel__slide-overlay"></div>
               </div>
               <div class="carousel__slide-body">
-                <h3 class="carousel__slide-title">Cross-Play</h3>
+                <h3 class="carousel__slide-title">CROSS-PLAY</h3>
                 <p class="carousel__slide-desc">Кроссплатформенная игра с друзьями на любых устройствах</p>
+                <span class="carousel__slide-link">ПОДРОБНЕЕ →</span>
               </div>
             </article>
             <!-- Слайд 4: Quick Resume -->
             <article class="carousel__slide">
               <div class="carousel__slide-img">
                 <img src="assets/images/QuikeResume.jpg" alt="Quick Resume" loading="lazy">
+                <div class="carousel__slide-overlay"></div>
               </div>
               <div class="carousel__slide-body">
-                <h3 class="carousel__slide-title">Quick Resume</h3>
+                <h3 class="carousel__slide-title">QUICK RESUME</h3>
                 <p class="carousel__slide-desc">Мгновенное переключение между несколькими играми</p>
+                <span class="carousel__slide-link">ПОДРОБНЕЕ →</span>
               </div>
             </article>
-            <!-- Дубль слайда 1 для бесшовного цикла -->
+            <!-- Дубль 1 для цикла -->
             <article class="carousel__slide" aria-hidden="true">
               <div class="carousel__slide-img">
-                <img src="assets/images/GamePass.jpg" alt="Game Pass" loading="lazy" aria-hidden="true">
+                <img src="assets/images/GamePass.jpg" alt="" aria-hidden="true" loading="lazy">
+                <div class="carousel__slide-overlay"></div>
+                <div class="carousel__slide-badge">FEATURED</div>
               </div>
               <div class="carousel__slide-body">
-                <h3 class="carousel__slide-title">Game Pass</h3>
+                <h3 class="carousel__slide-title">GAME PASS</h3>
                 <p class="carousel__slide-desc">Сотни игр по подписке с первого дня релиза</p>
+                <span class="carousel__slide-link">ПОДРОБНЕЕ →</span>
               </div>
             </article>
           </div>
 
-          <!-- Точки-индикаторы -->
           <div class="carousel__dots" id="carouselDots" role="tablist" aria-label="Навигация слайдера">
             <button class="carousel__dot active" role="tab" aria-selected="true" data-index="0" aria-label="Game Pass"></button>
             <button class="carousel__dot" role="tab" aria-selected="false" data-index="1" aria-label="Cloud Gaming"></button>
@@ -113,53 +141,57 @@
       </div>
     </section>
 
-    <!-- ===== АВТО-ДЕМОНСТРАЦИЯ «БЕЗ ЧЕЛОВЕКА» ===== -->
+    <!-- ===== АВТО-ДЕМОНСТРАЦИЯ ===== -->
     <section id="features" class="features section">
+      <div class="features__bg" aria-hidden="true">
+        <img src="assets/images/gamepad-black.jpg" alt="" aria-hidden="true">
+        <div class="features__overlay"></div>
+      </div>
       <div class="container">
         <header class="section__header">
-          <h2 class="section__title">Система <span class="accent">активна</span></h2>
+          <h2 class="section__title">СИСТЕМА <span class="accent">АКТИВНА</span></h2>
           <p class="section__desc">Все модули работают в полностью автоматическом режиме</p>
         </header>
 
         <div class="features__grid">
           <!-- Тайпер -->
-          <div class="feature-card">
-            <div class="feature-card__header">
-              <span class="feature-card__icon">⌨</span>
-              <span class="feature-card__status feature-card__status--live">LIVE</span>
+          <article class="features__card">
+            <div class="features__card-header">
+              <span class="features__card-number">01</span>
+              <span class="features__card-status">LIVE</span>
             </div>
-            <h3 class="feature-card__title">Авто-анонс функций</h3>
+            <h3 class="features__card-title">АВТО-АНОНС ФУНКЦИЙ</h3>
             <div class="typer" id="typer">
               <span class="typer__text" id="typerText"></span>
               <span class="typer__cursor" aria-hidden="true">|</span>
             </div>
-          </div>
+          </article>
 
-          <!-- Статус системы -->
-          <div class="feature-card">
-            <div class="feature-card__header">
-              <span class="feature-card__icon">◉</span>
-              <span class="feature-card__status feature-card__status--live">LIVE</span>
+          <!-- Статус -->
+          <article class="features__card">
+            <div class="features__card-header">
+              <span class="features__card-number">02</span>
+              <span class="features__card-status">LIVE</span>
             </div>
-            <h3 class="feature-card__title">Статус модулей</h3>
+            <h3 class="features__card-title">СТАТУС МОДУЛЕЙ</h3>
             <ul class="status-list" id="statusList">
               <li class="status-list__item">
-                <span class="status-list__dot status-list__dot--active"></span>
+                <span class="status-list__dot active"></span>
                 <span class="status-list__label">Game Pass Core</span>
                 <span class="status-list__badge">Active</span>
               </li>
               <li class="status-list__item">
-                <span class="status-list__dot status-list__dot--active"></span>
+                <span class="status-list__dot active"></span>
                 <span class="status-list__label">Cloud Streaming</span>
                 <span class="status-list__badge">Active</span>
               </li>
               <li class="status-list__item">
-                <span class="status-list__dot status-list__dot--active"></span>
+                <span class="status-list__dot active"></span>
                 <span class="status-list__label">Quick Resume</span>
                 <span class="status-list__badge">Active</span>
               </li>
               <li class="status-list__item">
-                <span class="status-list__dot status-list__dot--active"></span>
+                <span class="status-list__dot active"></span>
                 <span class="status-list__label">Smart Delivery</span>
                 <span class="status-list__badge">Active</span>
               </li>
@@ -169,20 +201,23 @@
                 <span class="status-list__badge status-list__badge--pending">Pending</span>
               </li>
             </ul>
-          </div>
+          </article>
 
           <!-- Счётчик -->
-          <div class="feature-card">
-            <div class="feature-card__header">
-              <span class="feature-card__icon">⚡</span>
-              <span class="feature-card__status feature-card__status--live">LIVE</span>
+          <article class="features__card">
+            <div class="features__card-header">
+              <span class="features__card-number">03</span>
+              <span class="features__card-status">LIVE</span>
             </div>
-            <h3 class="feature-card__title">Счётчик сессий</h3>
+            <h3 class="features__card-title">СЧЁТЧИК СЕССИЙ</h3>
             <div class="counter" id="counter">
               <span class="counter__value" id="counterValue">0</span>
-              <span class="counter__label">активных сессий</span>
+              <div class="counter__meta">
+                <span class="counter__label">АКТИВНЫХ СЕССИЙ</span>
+                <span class="counter__note">С АВТОМАТИЧЕСКОГО ЗАПУСКА</span>
+              </div>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -191,35 +226,68 @@
     <section id="gallery" class="gallery section">
       <div class="container">
         <header class="section__header">
-          <h2 class="section__title">Галерея <span class="accent">Xbox</span></h2>
+          <h2 class="section__title">ГАЛЕРЕЯ <span class="accent">XBOX</span></h2>
           <p class="section__desc">Ключевые элементы игровой экосистемы</p>
         </header>
 
         <div class="gallery__grid">
-          <figure class="gallery__item">
-            <img src="assets/images/GamePass.jpg" alt="Xbox Game Pass" loading="lazy">
-            <figcaption class="gallery__item-caption">Game Pass — подписка на сотни игр</figcaption>
+          <figure class="gallery__card">
+            <img src="assets/images/GamePass.jpg" alt="Game Pass" loading="lazy">
+            <figcaption class="gallery__card-caption">
+              <span class="gallery__card-badge">GAME PASS</span>
+              <span class="gallery__card-text">Сотни игр по подписке</span>
+            </figcaption>
           </figure>
-          <figure class="gallery__item">
-            <img src="assets/images/CloudeGaming.jpg" alt="Xbox Cloud Gaming" loading="lazy">
-            <figcaption class="gallery__item-caption">Cloud Gaming — играй где угодно</figcaption>
+          <figure class="gallery__card">
+            <img src="assets/images/CloudeGaming.jpg" alt="Cloud Gaming" loading="lazy">
+            <figcaption class="gallery__card-caption">
+              <span class="gallery__card-badge">CLOUD GAMING</span>
+              <span class="gallery__card-text">Играй на любых устройствах</span>
+            </figcaption>
           </figure>
-          <figure class="gallery__item">
+          <figure class="gallery__card">
             <img src="assets/images/CrossplayMultiplatform.jpg" alt="Cross-Play" loading="lazy">
-            <figcaption class="gallery__item-caption">Cross-Play — все платформы вместе</figcaption>
+            <figcaption class="gallery__card-caption">
+              <span class="gallery__card-badge">CROSS-PLAY</span>
+              <span class="gallery__card-text">Все платформы вместе</span>
+            </figcaption>
           </figure>
-          <figure class="gallery__item">
+          <figure class="gallery__card">
             <img src="assets/images/QuikeResume.jpg" alt="Quick Resume" loading="lazy">
-            <figcaption class="gallery__item-caption">Quick Resume — мгновенное переключение</figcaption>
+            <figcaption class="gallery__card-caption">
+              <span class="gallery__card-badge">QUICK RESUME</span>
+              <span class="gallery__card-text">Мгновенное переключение</span>
+            </figcaption>
           </figure>
-          <figure class="gallery__item">
-            <img src="assets/images/gamepad-black.jpg" alt="Xbox Elite Controller" loading="lazy">
-            <figcaption class="gallery__item-caption">Xbox Elite Controller</figcaption>
+          <figure class="gallery__card">
+            <img src="assets/images/gamepad-white.jpg" alt="Xbox Контроллер" loading="lazy">
+            <figcaption class="gallery__card-caption">
+              <span class="gallery__card-badge">XBOX WIRELESS</span>
+              <span class="gallery__card-text">Новый дизайн контроллера</span>
+            </figcaption>
           </figure>
-          <figure class="gallery__item gallery__item--wide">
-            <img src="assets/images/logo.svg" alt="Xbox Logo" loading="lazy">
-            <figcaption class="gallery__item-caption">Xbox Brand</figcaption>
+          <figure class="gallery__card">
+            <img src="assets/images/gamepad-black.jpg" alt="Xbox Elite" loading="lazy">
+            <figcaption class="gallery__card-caption">
+              <span class="gallery__card-badge">XBOX ELITE</span>
+              <span class="gallery__card-text">Профессиональный контроллер</span>
+            </figcaption>
           </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section section">
+      <div class="cta-section__bg" aria-hidden="true">
+        <img src="assets/images/CrossplayMultiplatform.jpg" alt="" aria-hidden="true">
+        <div class="cta-section__overlay"></div>
+      </div>
+      <div class="container">
+        <div class="cta-section__content">
+          <h2 class="cta-section__title">ГОТОВ <span class="accent">ПРИСОЕДИНИТЬСЯ</span>?</h2>
+          <p class="cta-section__desc">Вся экосистема Xbox работает автоматически. Твой ход.</p>
+          <a href="#" class="btn btn--primary btn--lg">НАЧАТЬ ИГРАТЬ</a>
         </div>
       </div>
     </section>
@@ -229,12 +297,55 @@
   <!-- ===== FOOTER ===== -->
   <footer class="footer" role="contentinfo">
     <div class="container">
-      <div class="footer__inner">
-        <a href="#" class="footer__logo">
-          <span class="header__logo-accent">XBOX</span> SHOWCASE
+      <div class="footer__social">
+        <a href="#" class="footer__social-link" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
         </a>
-        <p class="footer__copy">&copy; 2026 Xbox Showcase. Учебный проект.</p>
+        <a href="#" class="footer__social-link" aria-label="Twitter/X">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="#" class="footer__social-link" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="#" class="footer__social-link" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
       </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h4 class="footer__col-title">КОНСОЛИ</h4>
+          <ul>
+            <li><a href="#">Xbox Series X</a></li>
+            <li><a href="#">Xbox Series S</a></li>
+            <li><a href="#">Xbox One</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">ИГРЫ</h4>
+          <ul>
+            <li><a href="#">Game Pass</a></li>
+            <li><a href="#">Cloud Gaming</a></li>
+            <li><a href="#">Бесплатные игры</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">ПОДДЕРЖКА</h4>
+          <ul>
+            <li><a href="#">Справка</a></li>
+            <li><a href="#">Статус Xbox</a></li>
+            <li><a href="#">Сообщество</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">О ПРОЕКТЕ</h4>
+          <ul>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">License</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__copy">&copy; 2026 Xbox Showcase. Учебный проект. Все права принадлежат Microsoft Corporation.</p>
     </div>
   </footer>
 
